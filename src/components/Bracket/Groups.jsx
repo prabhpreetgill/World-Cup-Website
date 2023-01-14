@@ -6,7 +6,6 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import Flag from "../Shortcuts/Flag"
 
 // A function which takes a group and creates a table with labels, a flag and shows the data coresponding the column headers
 
@@ -33,7 +32,7 @@ export default function CreateTable(rows) {
             >
               <TableCell align='left' width="10%">{row.rank}</TableCell>
               <TableCell component="th" scope="row" sx={{fontSize: {xs: "0.7rem", sm:"1rem"}, p:1}} width="20%">
-                {Flag(row.name)}  {row.name}
+                  {row.name}
               </TableCell>
               <TableCell align="right" width="10%" sx={{fontSize: {xs: "0.7rem", sm:"1rem"}, p:1}}>{row.gp}</TableCell>
               <TableCell align="right" width="10%" sx={{fontSize: {xs: "0.7rem", sm:"1rem"}, p:1}}>{row.wins}</TableCell>
