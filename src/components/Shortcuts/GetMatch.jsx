@@ -1,15 +1,19 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
-import ApiData from "../ApiData";
+import ApiData from "./ApiData";
 import { Link } from "react-router-dom";
 
+
+// A function which takes the url of a match and displays its data onto a card
 export default function Match(url) {
-  const { data } = ApiData(url);
+  // fetches data of the game using the ApiData function and stores in onto a const called result
+  const { data, loading } = ApiData(url);
   const result = data;
 
   const rees = () => {
     if (
+      // If the match is a draw and it not a group stages game, the penalty score is displayed and FINAL ON PENALTIES is displayed
       result?.HomeTeam?.Score === result?.AwayTeam?.Score &&
       result?.GroupName[0]?.Description == null
     ) {
@@ -149,6 +153,7 @@ export default function Match(url) {
         </>
       );
     } else {
+      // else score is displayed 
       return (
         <>
           <Link
@@ -260,5 +265,5 @@ export default function Match(url) {
     }
   };
 
-  return rees();
+    return rees();
 }

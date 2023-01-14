@@ -1,3 +1,5 @@
+// Data for each group
+
 const groupA = [
   {
     name: "NED",

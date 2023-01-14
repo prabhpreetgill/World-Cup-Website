@@ -6,10 +6,11 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import getFlag from "../Shortcuts/flag"
+import Flag from "../Shortcuts/Flag"
 
+// A function which takes a group and creates a table with labels, a flag and shows the data coresponding the column headers
 
-export default function BasicTable(rows) {
+export default function CreateTable(rows) {
   return (
     <TableContainer component={Paper} sx={{maxWidth: "500px", m: 2, p: 2, borderRadius: "20px", backgroundColor: "rgba(255, 250, 250, 0.6)"}}>
       <Table aria-label="simple table">
@@ -32,7 +33,7 @@ export default function BasicTable(rows) {
             >
               <TableCell align='left' width="10%">{row.rank}</TableCell>
               <TableCell component="th" scope="row" sx={{fontSize: {xs: "0.7rem", sm:"1rem"}, p:1}} width="20%">
-                {getFlag(row.name)}  {row.name}
+                {Flag(row.name)}  {row.name}
               </TableCell>
               <TableCell align="right" width="10%" sx={{fontSize: {xs: "0.7rem", sm:"1rem"}, p:1}}>{row.gp}</TableCell>
               <TableCell align="right" width="10%" sx={{fontSize: {xs: "0.7rem", sm:"1rem"}, p:1}}>{row.wins}</TableCell>

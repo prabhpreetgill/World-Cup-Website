@@ -6,6 +6,8 @@ import TeamNav from "../TeamNav";
 import OrganizeStats from "./OrganizeStats";
 
 export default function Stats() {
+  
+  // Page is the page that will be displayed on the website
   return (
     <>
       <TeamHeader />

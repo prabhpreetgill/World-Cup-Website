@@ -3,9 +3,11 @@ import { Box, Typography } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import { Link } from "react-router-dom";
 
+// Creates a card for each match 
 
 export default function MatchMaker(result) {
     if (
+      // If the match is a draw and it is not a group stages match, the function will add penalty scores and display FINAL BY PENALTIES
         result?.Home?.Score === result?.Away?.Score &&
         result?.GroupName[0]?.Description == null
       ) {
@@ -159,6 +161,7 @@ export default function MatchMaker(result) {
           </>
         );
       } else {
+        // Else the function will display just the score
         let time = result.Date.slice(11, 16);
         return (
           <>
@@ -223,7 +226,7 @@ export default function MatchMaker(result) {
                           }}
                         />
                         <Typography
-                          sx={{ fontSize: { xs: "1.5rem", sm: "2rem" } }}
+                          sx={{ fontSize: { xs: "1.5rem", sm: "2rem" }, mr: 2}}
                         >
                           {result?.Home?.TeamName[0]?.Description}
                         </Typography>
@@ -265,7 +268,7 @@ export default function MatchMaker(result) {
                           }}
                         />
                         <Typography
-                          sx={{ fontSize: { xs: "1.5rem", sm: "2rem" } }}
+                          sx={{ fontSize: { xs: "1.5rem", sm: "2rem" }, mr: 2}}
                         >
                           {result?.Away?.TeamName[0]?.Description}
                         </Typography>

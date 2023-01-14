@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Typography } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 
+// A function that creates a card for a player after inputing their position
 export default function playerCard(position) {
   return position?.map((player) => (
     <Box

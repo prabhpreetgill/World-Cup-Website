@@ -1,16 +1,20 @@
-import { AppBar, Link, MenuItem, Toolbar, Typography } from "@mui/material";
+import { AppBar, Link, Typography } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import { useParams } from "react-router-dom";
 
+
+// Navigation Bar for Team Pages
 export default function TeamNav() {
 
+  // conts team is the team id from the route paramters
   const teamCode = useParams()
       const team = teamCode.id
 
+  // Object array of pages names, urls, and id
   const pages = [
     {
       title: "FIXTURES",
-      url: "/teams/"+team+"/fixtures",
+      url: "/teams/"+team,
       id: "fix",
     },
     {

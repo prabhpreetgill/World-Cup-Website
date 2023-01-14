@@ -1,17 +1,19 @@
 import { Box, Typography } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
-import ApiData from "./ApiData";
+import ApiData from "./Shortcuts/ApiData";
 import React from "react";
 import { Link } from "react-router-dom";
 import Header from "./Shortcuts/PageHeader"
 
-export default function Home() {
+export default function Team() {
 
+  // const data is all teams in the world cup
   const { data } = ApiData(
     "https://api.fifa.com/api/v3/competitions/teams/255711?language=en"
   );
   const name = data?.Results;
 
+  // first and second half of flag link
   const fLink = "https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/";
   const sLink = "?tx=c_fill,g_auto,q_auto,w_227,h_150";
 

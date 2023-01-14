@@ -1,9 +1,9 @@
 import React from "react";
-import Squad from "../Team/squad";
-import TeamNav from "./TeamNav";
-import TeamHeader from "./TeamHeader"
+import TeamNav from "../TeamNav";
+import TeamHeader from "../TeamHeader"
+import Squad from "./Squad";
 
-export default function Test() {
+export default function SquadView() {
      
       return (
         <>

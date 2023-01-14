@@ -1,3 +1,5 @@
+
+// Hashmap that contains each teams heading colors and arts
 export default function DecorationValue() {
 
     const decorationValues = new Map();

@@ -1,24 +1,29 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
-import ApiData from "../ApiData";
+import ApiData from "../../Shortcuts/ApiData";
 import { Link, useParams } from "react-router-dom";
-import IdToTeam from "./IdToTeam";
 
 export default function FixtureResult() {
+
+  // Sets const teamCode to useParams and sets const team the route paramter with the name id
   const teamCode = useParams();
   const team = teamCode.id;
 
+  // Gets the API for all matches using the start and end of the url and inserting the team id into the Url
   const url =
     "https://api.fifa.com/api/v3/calendar/matches?language=en&count=500&idTeam=" +
     team +
     "&idSeason=255711";
 
+  // Using the URL created above, we fetch the API data using the function ApiData and save the results onto a const called results
   const { data } = ApiData(url);
   const results = data?.Results;
 
+  // Created a function called rees that maps all the results
   const rees = () =>
     results?.map((result) => {
+      // if the result is a draw and not a group stage match, the penalty score will be displayed
       if (
         result?.Home?.Score === result?.Away?.Score &&
         result?.GroupName[0]?.Description == null
@@ -166,6 +171,7 @@ export default function FixtureResult() {
           </>
         );
       } else {
+        // else only the score will be displayed
         return (
           <>
             <Link

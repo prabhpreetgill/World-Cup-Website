@@ -1,7 +1,9 @@
 import { Box, Typography } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 
+// A function which generates a header for each page, takes a string input of what you want displayed on the header
 export default function PageHeader(page) {
+  
   return (
     <Grid2
       sx={{
