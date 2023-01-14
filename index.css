@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;}
+
+html, body {
+    height: 100%;
+    background-color: #E7F6F2;
+}
+
+.home-container-left {
+    width: 50%;
+    height: 90vh;
+    z-index: -1;
+    background-color: black;
+}
