@@ -1,4 +1,4 @@
-#World Cup website
+# World Cup website
 
 A Clone World Cup website, developed using React, React Router, and Material-UI is a web application that provides detailed information about the World Cup tournament. The website features fixtures, groups, standings, and teams information, making it a one-stop destination for all World Cup-related information.
 
