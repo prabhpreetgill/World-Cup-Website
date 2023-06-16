@@ -63,9 +63,8 @@ export default function MatchMaker(result) {
                         <Box
                           component="img"
                           src={
-                            "https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/" +
-                            result?.Home?.IdCountry +
-                            "?tx=c_fill,g_auto,q_auto,w_50"
+                            "https://api.fifa.com/api/v3/picture/flags-sq-4/" +
+                            result?.Home?.IdCountry
                           }
                           alt="country-flag"
                           sx={{
@@ -91,7 +90,8 @@ export default function MatchMaker(result) {
                           alignItems: "center",
                         }}
                       >
-                        <Typography fontSize="1.5rem" sx={{ mr: 1.5 }}>
+                        <Typography fontSize="1.5rem" 
+                        sx={{ mr: 1.5, fontWeight: 'bold'}}>
                           ({result?.HomeTeamPenaltyScore})
                         </Typography>
                         <Typography fontSize="2rem">
@@ -117,9 +117,8 @@ export default function MatchMaker(result) {
                         <Box
                           component="img"
                           src={
-                            "https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/" +
-                            result?.Away?.IdCountry +
-                            "?tx=c_fill,g_auto,q_auto,w_50"
+                            "https://api.fifa.com/api/v3/picture/flags-sq-4/" +
+                            result?.Away?.IdCountry
                           }
                           alt="country-flag"
                           sx={{
@@ -142,7 +141,8 @@ export default function MatchMaker(result) {
                           alignItems: "center",
                         }}
                       >
-                        <Typography fontSize="1.5rem" sx={{ mr: 1.5 }}>
+                        <Typography fontSize="1.5rem" 
+                        sx={{ mr: 1.5, fontWeight: 'bold'}}>
                           ({result?.AwayTeamPenaltyScore})
                         </Typography>
                         <Typography fontSize="2rem">
@@ -214,9 +214,8 @@ export default function MatchMaker(result) {
                         <Box
                           component="img"
                           src={
-                            "https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/" +
-                            result?.Home?.IdCountry +
-                            "?tx=c_fill,g_auto,q_auto,w_50"
+                            "https://api.fifa.com/api/v3/picture/flags-sq-4/" +
+                            result?.Home?.IdCountry
                           }
                           alt="country-flag"
                           sx={{
@@ -233,7 +232,7 @@ export default function MatchMaker(result) {
                       </Grid2>
                       <Typography
                         fontSize="2rem"
-                        sx={{ mr: { sm: 5, xs: 1 } }}
+                        sx={{ mr: { sm: 5, xs: 1 }, fontWeight: 'bold'}}
                       >
                         {result?.HomeTeamScore}
                       </Typography>
@@ -256,9 +255,8 @@ export default function MatchMaker(result) {
                         <Box
                           component="img"
                           src={
-                            "https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/" +
-                            result?.Away?.IdCountry +
-                            "?tx=c_fill,g_auto,q_auto,w_50"
+                            "https://api.fifa.com/api/v3/picture/flags-sq-4/" +
+                            result?.Away?.IdCountry
                           }
                           alt="country-flag"
                           sx={{
@@ -275,7 +273,7 @@ export default function MatchMaker(result) {
                       </Grid2>
                       <Typography
                         fontSize="2rem"
-                        sx={{ mr: { sm: 5, xs: 1 } }}
+                        sx={{ mr: { sm: 5, xs: 1 }, fontWeight: 'bold'}}
                       >
                         {result?.AwayTeamScore}
                       </Typography>

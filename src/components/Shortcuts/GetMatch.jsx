@@ -55,9 +55,8 @@ export default function Match(url) {
                       <Box
                         component="img"
                         src={
-                          "https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/" +
-                          result?.HomeTeam?.Abbreviation +
-                          "?tx=c_fill,g_auto,q_auto,w_30"
+                          "https://api.fifa.com/api/v3/picture/flags-sq-4/" +
+                          result?.HomeTeam?.Abbreviation
                         }
                         alt="country-flag"
                         sx={{
@@ -108,9 +107,8 @@ export default function Match(url) {
                       <Box
                         component="img"
                         src={
-                          "https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/" +
-                          result?.AwayTeam?.Abbreviation +
-                          "?tx=c_fill,g_auto,q_auto,w_30"
+                          "https://api.fifa.com/api/v3/picture/flags-sq-4/" +
+                          result?.AwayTeam?.Abbreviation
                         }
                         alt="country-flag"
                         sx={{
@@ -192,9 +190,8 @@ export default function Match(url) {
                       <Box
                         component="img"
                         src={
-                          "https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/" +
-                          result?.HomeTeam?.Abbreviation +
-                          "?tx=c_fill,g_auto,q_auto,w_30"
+                          "https://api.fifa.com/api/v3/picture/flags-sq-4/" +
+                          result?.HomeTeam?.Abbreviation
                         }
                         alt="country-flag"
                         sx={{
@@ -233,9 +230,8 @@ export default function Match(url) {
                       <Box
                         component="img"
                         src={
-                          "https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/" +
-                          result?.AwayTeam?.Abbreviation +
-                          "?tx=c_fill,g_auto,q_auto,w_30"
+                          "https://api.fifa.com/api/v3/picture/flags-sq-4/" +
+                          result?.AwayTeam?.Abbreviation
                         }
                         alt="country-flag"
                         sx={{

@@ -79,9 +79,8 @@ export default function FixtureResult() {
                         <Box
                           component="img"
                           src={
-                            "https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/" +
-                            result?.Home?.IdCountry +
-                            "?tx=c_fill,g_auto,q_auto,w_50"
+                            "https://api.fifa.com/api/v3/picture/flags-sq-4/" +
+                            result?.Home?.IdCountry
                           }
                           alt="country-flag"
                           sx={{
@@ -130,9 +129,8 @@ export default function FixtureResult() {
                         <Box
                           component="img"
                           src={
-                            "https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/" +
-                            result?.Away?.IdCountry +
-                            "?tx=c_fill,g_auto,q_auto,w_50"
+                            "https://api.fifa.com/api/v3/picture/flags-sq-4/" +
+                            result?.Away?.IdCountry 
                           }
                           alt="country-flag"
                           sx={{
@@ -223,9 +221,8 @@ export default function FixtureResult() {
                         <Box
                           component="img"
                           src={
-                            "https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/" +
-                            result?.Home?.IdCountry +
-                            "?tx=c_fill,g_auto,q_auto,w_50"
+                            "https://api.fifa.com/api/v3/picture/flags-sq-4/" +
+                            result?.Home?.IdCountry
                           }
                           alt="country-flag"
                           sx={{
@@ -262,9 +259,8 @@ export default function FixtureResult() {
                         <Box
                           component="img"
                           src={
-                            "https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/" +
-                            result?.Away?.IdCountry +
-                            "?tx=c_fill,g_auto,q_auto,w_50"
+                            "https://api.fifa.com/api/v3/picture/flags-sq-4/" +
+                            result?.Away?.IdCountry
                           }
                           alt="country-flag"
                           sx={{

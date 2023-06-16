@@ -89,7 +89,7 @@ export default function Score() {
                 <Grid2 sx={{display: "flex", mt: "5%", alignItems: "center", flexDirection: "row", justifyContent: "space-evenly"}}>
                 <Grid2 sx={{display: "flex", alignItems: "center", flexDirectiom: "row", width: "30%", justifyContent: "center"}}>
                         <Typography sx={{fontSize: {xs:"1rem", sm:"1.5rem", md:"2.5rem"}, pr: "5%"}}>{upperCase(data?.HomeTeam?.ShortClubName)}</Typography>
-                        <Box component="img" src={"https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/"+data?.HomeTeam.IdCountry+"?tx=c_fill,g_auto,q_auto,w_100"} sx={{ height: {md:"67px", sm:"50px", xs: "27px"}, width: {xs: "40px", sm: "75px", md: "100px"}  ,border: {xs:"1px solid black", sm: "2px solid black"}}}></Box>
+                        <Box component="img" src={"https://api.fifa.com/api/v3/picture/flags-sq-4/"+data?.HomeTeam.IdCountry} sx={{ height: {md:"67px", sm:"50px", xs: "27px"}, width: {xs: "40px", sm: "75px", md: "100px"}  ,border: {xs:"1px solid black", sm: "2px solid black"}}}></Box>
                     </Grid2>
                     <Grid2>
                         <Typography sx={{fontSize: {xs: "0.8rem", sm:"1rem", md: "1.5rem"}}}>({data?.HomeTeamPenaltyScore})</Typography>                    
@@ -101,7 +101,7 @@ export default function Score() {
                         <Typography sx={{fontSize: {xs: "0.8rem", sm:"1rem", md: "1.5rem"}}}>({data?.AwayTeamPenaltyScore})</Typography>                    
                     </Grid2>
                     <Grid2 sx={{display: "flex", alignItems: "center", flexDirectiom: "row", width: "30%", justifyContent: "center"}}>
-                        <Box component="img" src={"https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/"+data?.AwayTeam.IdCountry+"?tx=c_fill,g_auto,q_auto,w_100"} sx={{ height: {md:"67px", sm:"50px", xs: "27px"}, width: {xs: "40px", sm: "75px", md: "100px"}  ,border: {xs:"1px solid black", sm: "2px solid black"}}}></Box>
+                        <Box component="img" src={"https://api.fifa.com/api/v3/picture/flags-sq-4/"+data?.AwayTeam.IdCountry} sx={{ height: {md:"67px", sm:"50px", xs: "27px"}, width: {xs: "40px", sm: "75px", md: "100px"}  ,border: {xs:"1px solid black", sm: "2px solid black"}}}></Box>
                         <Typography sx={{fontSize: {xs:"1rem", sm:"1.5rem", md:"2.5rem"}, pl: "5%"}}>{upperCase(data?.AwayTeam?.ShortClubName)}</Typography>
                     </Grid2>                    
                 </Grid2>
@@ -135,22 +135,22 @@ export default function Score() {
     )} else {
         return (
             <Grid2 sx={{backgroundColor: "rgba(255,250,250,0.5)", py: 5}}>
-                    <Typography textAlign="center" sx={{fontSize: {xs: "1.5rem", sm: "2rem", md: "3rem"}, pb: 3}}>Match</Typography>
+                    <Typography textAlign="center" sx={{fontSize: {xs: "1.5rem", sm: "2rem", md: "3.5rem"}, pb: 3}}>Match</Typography>
                 <Grid2 sx={{display: "flex", justifyContent: "space-between", mx: "5%"}}>
-                    <Typography sx={{fontSize: {xs: "1rem", sm: "1.5rem"}, opacity: "0.7"}}>{data?.StageName[0]?.Description}  {data?.GroupName[0]?.Description}</Typography>
-                    <Typography sx={{fontSize: {xs: "1rem", sm: "1.5rem"}, opacity: "0.7"}}>{data?.Date.slice(0,10)}</Typography>
+                    <Typography sx={{fontSize: {xs: "1rem", sm: "2rem"}, opacity: "0.7"}}>{data?.StageName[0]?.Description}  {data?.GroupName[0]?.Description}</Typography>
+                    <Typography sx={{fontSize: {xs: "1rem", sm: "2rem"}, opacity: "0.7"}}>{data?.Date.slice(0,10)}</Typography>
                 </Grid2>
                 <Grid2 sx={{display: "flex", mt: "5%", alignItems: "center", flexDirection: "row", justifyContent: "space-evenly"}}>
                 <Grid2 sx={{display: "flex", alignItems: "center", flexDirectiom: "row", width: "30%", justifyContent: "center"}}>
-                        <Typography sx={{fontSize: {xs:"1rem", sm:"1.5rem", md:"2.5rem"}, pr: "5%"}}>{upperCase(data?.HomeTeam?.ShortClubName)}</Typography>
-                        <Box component="img" src={"https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/"+data?.HomeTeam.IdCountry+"?tx=c_fill,g_auto,q_auto,w_100"} sx={{ height: {md:"67px", sm:"50px", xs: "27px"}, width: {xs: "40px", sm: "75px", md: "100px"}  ,border: {xs:"1px solid black", sm: "2px solid black"}}}></Box>
+                        <Typography sx={{fontSize: {xs:"1rem", sm:"1.5rem", md:"5rem"}, pr: "5%"}}>{upperCase(data?.HomeTeam?.ShortClubName)}</Typography>
+                        <Box component="img" src={"https://api.fifa.com/api/v3/picture/flags-sq-4/"+data?.HomeTeam.IdCountry} sx={{ height: {md:"67px", sm:"50px", xs: "27px"}, width: {xs: "40px", sm: "75px", md: "100px"}  ,border: {xs:"1px solid black", sm: "2px solid black"}}}></Box>
                     </Grid2>
                     <Grid2>
-                        <Typography sx={{fontSize: {xs:"1rem", sm:"1.5rem", md:"2rem"}}}>{data?.HomeTeam?.Score} - {data?.AwayTeam?.Score}</Typography>
+                        <Typography sx={{fontSize: {xs:"1rem", sm:"1.5rem", md:"5rem"}}}>{data?.HomeTeam?.Score} - {data?.AwayTeam?.Score}</Typography>
                     </Grid2>
                     <Grid2 sx={{display: "flex", alignItems: "center", flexDirectiom: "row", width: "30%", justifyContent: "center"}}>
-                        <Box component="img" src={"https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/"+data?.AwayTeam.IdCountry+"?tx=c_fill,g_auto,q_auto,w_100"} sx={{ height: {md:"67px", sm:"50px", xs: "27px"}, width: {xs: "40px", sm: "75px", md: "100px"}  ,border: {xs:"1px solid black", sm: "2px solid black"}}}></Box>
-                        <Typography sx={{fontSize: {xs:"1rem", sm:"1.5rem", md:"2.5rem"}, pl: "5%"}}>{upperCase(data?.AwayTeam?.ShortClubName)}</Typography>
+                        <Box component="img" src={"https://api.fifa.com/api/v3/picture/flags-sq-4/"+data?.AwayTeam.IdCountry} sx={{ height: {md:"67px", sm:"50px", xs: "27px"}, width: {xs: "40px", sm: "75px", md: "100px"}  ,border: {xs:"1px solid black", sm: "2px solid black"}}}></Box>
+                        <Typography sx={{fontSize: {xs:"1rem", sm:"1.5rem", md:"5rem"}, pl: "5%"}}>{upperCase(data?.AwayTeam?.ShortClubName)}</Typography>
                     </Grid2>                    
                 </Grid2>
                 <Grid2 sx={{mt: "3%", display: "flex", justifyContent: "center"}}>
@@ -160,7 +160,7 @@ export default function Score() {
                     <Grid2 sx={{width: "40%"}}>
                         {homeGoalScorers?.map(name => (
                         <Grid2 sx={{display: "flex", justifyContent: "right", alignItems:"center", pb: "2%", opacity: "0.7"}}>
-                            <Typography sx={{pr: 1, fontSize: {xs: "0.7rem", md: "1rem"}}}>{name.min}</Typography>
+                            <Typography sx={{pr: 1, fontSize: {xs: "0.7rem", md: "2rem"}}}>{name.min}</Typography>
                             <Typography sx={{pr: 2, fontSize: {xs: "0.8rem", sm: "1.2rem", md: "1.5rem"}}}>{name.id}</Typography>
                             <SportsSoccerIcon sx={{fontSize: {xs: "1.2rem"}}}/>
                         </Grid2>
@@ -168,10 +168,10 @@ export default function Score() {
                     </Grid2>
                     <Grid2  Grid2 sx={{width: "40%"}}>
                         {awayGoalScorers?.map(name => (
-                        <Grid2 sx={{display: "flex", justifyContent: "left", alignItems:"center", pb: "2%", opacity: "0.7"}}>
-                            <SportsSoccerIcon sx={{fontSize: {xs: "1.2rem"}}}/>
-                            <Typography sx={{pl: 2, fontSize: {xs: "0.8rem", sm: "1.2rem", md: "1.5rem"}}}>{name.id}</Typography>
-                            <Typography sx={{pl: 1, fontSize: {xs: "0.7rem", md: "1rem"}}}>{name.min}</Typography>
+                        <Grid2 sx={{display: "flex", justifyContent: "left", alignItems:"center", pb: "2%"}}>
+                            <SportsSoccerIcon sx={{fontSize: {xs: "2.5rem"}}}/>
+                            <Typography sx={{pl: 2, fontSize: {xs: "0.8rem", sm: "1.2rem", md: "2rem", opacity: "0.9"}}}>{name.id}</Typography>
+                            <Typography sx={{pl: 1, fontSize: {xs: "0.7rem", md: "1.5rem", opacity: "0.7"}}}>{name.min}</Typography>
                         </Grid2>
                         ))}
                     </Grid2>

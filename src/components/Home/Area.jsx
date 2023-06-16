@@ -7,11 +7,15 @@ import React from "react";
 // The home page display that has the world cup logo and says WELCOME TO THE 2022 WORLD CUP WEBSITE
 function Area () {
     return(
-        <Grid container  sx={{position: "fixed", display: "flex", justifyContent: "center", width: "100%", height: {xs: "90%", sm: "90%", md:"93%", lg: "91%"}, alignItems:"center", flexDirection: "column", backgroundColor: "black"}}>
-            <div style={{display: "flex", flexDirection: "column", alignItems:"center", justifyContent:"center"}}>
-                <Box component="img" src={Trophy} alt="WC Logo" sx={{maxWidth: {xs: "100%", md: "80%", lg: "70%"}}}/>
-                <Typography textAlign="center" sx={{color: "rgba(255,250,250,0.3)", fontSize: {xs: "2.2rem",sm:"3.5rem", xl: "5rem"}}}>Welcome to the 2022 World Cup Website</Typography>
-            </div>
+        <Grid container  sx={{position: "fixed", display: "flex", justifyContent: "center", width: "100%", height: {xs: "90%", sm: "90%", md:"93%", lg: "91%"}, alignItems:"center", flexDirection: "column", backgroundColor: "#FFFBF1"}}>
+            <Box sx ={{display: "flex", flexDirection: {xs:'column', md: 'row'}, alignItems:"center", justifyContent:"center"}}>
+                <div >
+                    <Box component="img" src={Trophy} alt="WC Logo" sx={{maxHeight: {xs: "40vh", md: "60vh", lg: "80vh"}}}/>
+                </div>
+                <div>
+                    <Typography textAlign="center" sx={{color: "black", fontSize: {xs: "2.2rem",sm:"3.5rem", xl: "5rem"},  fontWeight: 'bold', }}>2022 <br/> FIFA WORLD CUP <br/>TRACKER </Typography>
+                </div>
+            </Box>
         </Grid>
 )};
 

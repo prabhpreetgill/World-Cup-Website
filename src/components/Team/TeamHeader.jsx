@@ -40,7 +40,7 @@ export default function Header() {
 
   // Using the URL obtained from the team id create a link for the flag
   const { data: name } = ApiData(url);
-  const flag = "https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/" + name?.IdCountry + "?tx=c_fill,g_auto,q_auto";
+  const flag = "https://api.fifa.com/api/v3/picture/flags-sq-4/" + name?.IdCountry;
 
   return (
     <>

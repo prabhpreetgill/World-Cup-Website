@@ -60,15 +60,15 @@ export default function Lineups() {
             <Grid2 container sx={{display: "flex", justifyContent: "center"}}>
                 <Grid2 sx={{width: "350px", display: "flex", flexDirection: "column", justifyContent: "center", mx: 4}}>
                 <Grid2 sx={{display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center"}}>
-                        <Box component="img" src={"https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/"+data?.HomeTeam.IdCountry+"?tx=c_fill,g_auto,q_auto,w_100"} sx={{ height: {sm:"67px", xs:"33.5px"}, width: {xs: "50px", sm: "100px"}  ,border: "2px solid black"}}></Box>
-                        <Typography sx={{fontSize: "1.5rem", pb: 2}}>{data?.HomeTeam?.Tactics}</Typography>
+                        <Box component="img" src={"https://api.fifa.com/api/v3/picture/flags-sq-4/"+data?.HomeTeam.IdCountry} sx={{  height: {sm:"135px", xs:"33.5px"}, width: {xs: "50px", sm: "200px"}  ,border: "2px solid black"}}></Box>
+                        <Typography sx={{fontSize: "1.5rem", pb: 2, fontWeight: 'bold'}}>{data?.HomeTeam?.Tactics}</Typography>
                 </Grid2>
-                <Grid2 sx={{display: "flex", flexDirection: "column", alignItems: "center", backgroundColor: "rgba(255,250,250,0.7)", borderRadius: "10px"}}>
+                <Grid2 sx={{display: "flex", flexDirection: "column", alignItems: "center", backgroundColor: "rgba(255,250,250,0.7)", borderRadius: "10px", height: "950px", justifyContent: 'center', pr: 5}}>
                     {homeStarters?.map(player => (
-                    <Grid2 sx={{display: "flex", width: "350px", alignItems: "center", my: "1%", p: 1, justifyContent: "center"}}>
-                        <Box component="img" src={player?.PlayerPicture?.PictureUrl} sx={{mr: 1 ,height: {sm:"45px", xs: "30px"}, width: {xs: "20px",sm: "30px"}}}></Box>
-                        <Typography sx={{mr: 2}}>{player?.ShirtNumber}</Typography>
-                        <Typography>{player?.PlayerName[0].Description}</Typography>
+                    <Grid2 sx={{display: "flex", width: "350px", alignItems: "center", my: "1%", p: 1, justifyContent: "right"}}>
+                        <Typography sx ={{fontWeight: 'bold',}}>{player?.PlayerName[0].Description}</Typography>
+                        <Typography sx={{ml: 1, fontSize: '2rem'}}>{player?.ShirtNumber}</Typography>
+                        <Box component="img" src={player?.PlayerPicture?.PictureUrl} sx={{ml: 3 ,height: {sm:"45px", xs: "30px"}, width: {xs: "20px",sm: "30px"}}}></Box>
                     </Grid2>
                     ))}
                     <Typography fontSize="1.5rem" sx={{mt: 2}}>Head Coach</Typography>
@@ -80,15 +80,15 @@ export default function Lineups() {
                 </Grid2>
                 <Grid2 sx={{width: "350px", display: "flex", flexDirection: "column", justifyContent: "center", mx: 4, my: 4}}>
                     <Grid2 sx={{display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center"}}>
-                    <Box component="img" src={"https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/"+data?.AwayTeam.IdCountry+"?tx=c_fill,g_auto,q_auto,w_100"} sx={{ height: {sm:"67px", xs:"33.5px"}, width: {xs: "50px", sm: "100px"}  ,border: "2px solid black"}}></Box>
-                        <Typography sx={{fontSize: "1.5rem", pb: 2}}>{data?.AwayTeam?.Tactics}</Typography>
+                    <Box component="img" src={"https://api.fifa.com/api/v3/picture/flags-sq-4/"+data?.AwayTeam.IdCountry} sx={{ height: {sm:"135px", xs:"33.5px"}, width: {xs: "50px", sm: "200px"}  ,border: "2px solid black"}}></Box>
+                        <Typography sx={{fontSize: "1.5rem", pb: 2, fontWeight: 'bold'}}>{data?.AwayTeam?.Tactics}</Typography>
                     </Grid2>
-                    <Grid2 sx={{display: "flex", flexDirection: "column", alignItems: "center", backgroundColor: "rgba(255,250,250,0.7)", borderRadius: "10px"}}>
+                    <Grid2 sx={{display: "flex", flexDirection: "column", alignItems: "center", backgroundColor: "rgba(255,250,250,0.7)", borderRadius: "10px", pl: 3, height: "950px", justifyContent: 'center'}}>
                     {awayStarters?.map(player => (
-                        <Grid2 sx={{display: "flex", width: "350px", alignItems: "center", my: "1%", p: 1, justifyContent: "center"}}>
-                            <Box component="img" src={player?.PlayerPicture?.PictureUrl} sx={{mr: 1 ,height: {sm:"45px", xs: "30px"}, width: {xs: "20px",sm: "30px"}}}></Box>
-                            <Typography sx={{mr: 2}}>{player?.ShirtNumber}</Typography>
-                            <Typography>{player?.PlayerName[0].Description}</Typography>
+                        <Grid2 sx={{display: "flex", width: "350px", alignItems: "center", my: "1%", p: 1, justifyContent: "left"}}>
+                            <Box component="img" src={player?.PlayerPicture?.PictureUrl} sx={{mr: 3 ,height: {sm:"45px", xs: "30px"}, width: {xs: "20px",sm: "30px"}}}></Box>
+                            <Typography sx={{mr: 1, fontSize: '2rem'}}>{player?.ShirtNumber}</Typography>
+                            <Typography sx ={{fontWeight: 'bold'}}>{player?.PlayerName[0].Description}</Typography>
                         </Grid2>
                     ))}
                     <Typography fontSize="1.5rem" sx={{mt: 2}}>Head Coach</Typography>
