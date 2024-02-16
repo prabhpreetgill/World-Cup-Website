@@ -14,8 +14,7 @@ export default function Team() {
   const name = data?.Results;
 
   // first and second half of flag link
-  const fLink = "https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/";
-  const sLink = "?tx=c_fill,g_auto,q_auto,w_227,h_150";
+  const fLink = "https://api.fifa.com/api/v3/picture/flags-sq-4/";
 
   return(
     <>
@@ -37,7 +36,7 @@ export default function Team() {
               <Box
                 key={team.IdTeam}
                 component="img"
-                src={fLink + team.IdCountry + sLink}
+                src={fLink + team.IdCountry}
                 alt="country-flag"
                 sx={{ border: "5px solid #395B64", cursor: "pointer" }}
                 id={team.IdTeam}

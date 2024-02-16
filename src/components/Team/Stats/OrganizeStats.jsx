@@ -99,9 +99,8 @@ export default function OrganizeStats() {
             <Box
               component="img"
               src={
-                "https://cloudinary.fifa.com/api/v3/picture/flags-sq-4/" +
-                short +
-                "?tx=c_fill,g_auto,q_auto,w_50"
+                "https://api.fifa.com/api/v3/picture/flags-sq-4/" +
+                short
               }
               alt="country-flag"
               sx={{
